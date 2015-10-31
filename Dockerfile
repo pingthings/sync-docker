@@ -15,7 +15,7 @@ COPY run_sync /opt/
 EXPOSE 8888
 EXPOSE 55555
 
-VOLUME /mnt/sync
+VOLUME ["/mnt/sync", "/media/mastersync"]
 
 ENTRYPOINT ["/opt/run_sync"]
 CMD ["--log", "--config", "/etc/btsync.conf"]
